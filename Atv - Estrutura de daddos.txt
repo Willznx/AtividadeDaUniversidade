@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct territorio {
+      char nome[30];
+      char cor[10];
+      int tropas;
+  };
+
+int main() {
+   
+    struct territorio t[5];
+    int i;
+   
+    for (i = 0; i < 5; i++){
+    printf("Digite o nome do seu exercito: ");
+       scanf("%s", t[i].nome);
+   
+    printf("Digite a cor do seu exercito: ");
+        scanf("%s", t[i].cor);
+   
+     printf("Digite a quantidade de tropas: ");
+        scanf("%d", &t[i].tropas);
+   
+    }
+   
+     for(i = 0; i < 5; i++) {
+
+        printf("\nTerritorio %d\n", i + 1);
+        printf("Nome do exercito: %s\n", t[i].nome);
+        printf("Cor: %s\n", t[i].cor);
+        printf("Tropas: %d\n", t[i].tropas);
+    }
+    return 0;
+}
