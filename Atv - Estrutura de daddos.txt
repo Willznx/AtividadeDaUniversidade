@@ -1,34 +1,49 @@
-#include <stdio.h>
+Uma atividade da máteria estrutura de dados em C da minha faculdade pedia para criar um jogo semelhante ao War usando todo o conhecimento obtido na matéria.
 
-struct territorio {
-      char nome[30];
-      char cor[10];
-      int tropas;
-  };
+# 🎮 War Game - Simulador de Batalhas em C
 
-int main() {
-   
-    struct territorio t[5];
-    int i;
-   
-    for (i = 0; i < 5; i++){
-    printf("Digite o nome do seu exercito: ");
-       scanf("%s", t[i].nome);
-   
-    printf("Digite a cor do seu exercito: ");
-        scanf("%s", t[i].cor);
-   
-     printf("Digite a quantidade de tropas: ");
-        scanf("%d", &t[i].tropas);
-   
-    }
-   
-     for(i = 0; i < 5; i++) {
+Jogo de estratégia baseado no clássico War, desenvolvido em C para a disciplina de Estrutura de Dados. O projeto evolui em três níveis de complexidade, implementando conceitos fundamentais de programação.
 
-        printf("\nTerritorio %d\n", i + 1);
-        printf("Nome do exercito: %s\n", t[i].nome);
-        printf("Cor: %s\n", t[i].cor);
-        printf("Tropas: %d\n", t[i].tropas);
-    }
-    return 0;
-}
+## 📚 Sobre o Projeto
+
+Este projeto foi desenvolvido como trabalho prático da disciplina de Estrutura de Dados, demonstrando a aplicação de conceitos como:
+- Ponteiros e alocação dinâmica de memória
+- Structs e tipos abstratos de dados
+- Modularização e boas práticas de programação
+- Gerenciamento de memória
+
+## 🎯 Níveis de Implementação
+
+### Nível Básico - Cadastro de Territórios
+- Cadastro de exércitos com nome, cor e tropas
+- Exibição dos territórios cadastrados
+- Estrutura básica de dados
+
+### Nível Aventureiro - Sistema de Batalha
+- Alocação dinâmica de territórios
+- Sistema de ataque com rolagem de dados
+- Atualização de territórios após batalhas
+- Gerenciamento de memória
+
+### Nível Mestre - Missões Estratégicas
+- Sistema de missões aleatórias
+- Múltiplos jogadores
+- Condições de vitória variadas
+- Verificação automática de objetivos
+
+## 🚀 Como Executar
+
+### Pré-requisitos
+- Compilador GCC ou similar
+- Terminal/Console
+
+### Compilação e Execução
+
+```bash
+# Nível Aventureiro
+gcc src/nivel_aventureiro.c -o war_aventureiro
+./war_aventureiro
+
+# Nível Mestre
+gcc src/nivel_mestre.c -o war_mestre
+./war_mestre
